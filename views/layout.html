@@ -33,6 +33,7 @@
   .css('/public/libs/webuploader/webuploader.css')
   .css('/public/libs/code-prettify/prettify.css')
   .css('/public/libs/font-awesome/css/font-awesome.css')
+  .css('/public/stylesheets/jquery-ui.min.css')
   .done(assets, config.site_static_host, config.mini_assets)
   %>
 
@@ -49,6 +50,7 @@
   .js('/public/libs/qrcode.js')
   .js('/public/javascripts/main.js')
   .js('/public/javascripts/responsive.js')
+  .js('/public/javascripts/jquery-ui.min.js')
   .done(assets, config.site_static_host, config.mini_assets)
   %>
 
@@ -79,7 +81,7 @@
         ginput type='text' id='q' name='q' class='search-query span3' value=''/>
       </form>
       <ul class='nav pull-right'>
-        <li><a href='/'>首頁test!!</a></li>
+        <li><a href='/'>首頁!</a></li>
         <% if (current_user){ %>
         <li>
             <a href='/my/messages'>
@@ -142,7 +144,6 @@
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script', "<%- proxy('https://www.google-analytics.com/analytics.js') %>",'ga');
-
   ga('create', '<%-config.google_tracker_id%>', 'auto');
   ga('send', 'pageview');
 </script>
